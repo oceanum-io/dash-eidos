@@ -1,0 +1,13 @@
+Package: dashEidos
+Title: EIDOS component for Dash
+Version: 0.1.0
+Description: EIDOS component for Dash
+Depends: 
+Imports: 
+Suggests: 
+License: MIT + file LICENSE
+URL: https://github.com/oceanum-io/dash-eidos
+BugReports: https://github.com/oceanum-io/dash-eidos/issues
+Encoding: UTF-8
+LazyData: true
+KeepSource: true

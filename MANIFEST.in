@@ -1,0 +1,8 @@
+include dash_eidos/dash_eidos.min.js
+include dash_eidos/Eidos.js
+include dash_eidos/vendor.js
+include dash_eidos/metadata.json
+include dash_eidos/package-info.json
+include README.md
+include LICENSE
+include package.json

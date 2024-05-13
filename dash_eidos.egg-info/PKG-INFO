@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dash_eidos
+Version: 0.1.0
+Summary: Deck.gl component for Dash
+Author: Oceanum developers <developers@oceanum.science>
+License: MIT
+Classifier: Framework :: Dash
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Package: dashEidos
+Title: EIDOS component for Dash
+Version: 0.1.0
+Description: EIDOS component for Dash
+Depends: 
+Imports: 
+Suggests: 
+License: MIT + file LICENSE
+URL: https://github.com/oceanum-io/dash-eidos
+BugReports: https://github.com/oceanum-io/dash-eidos/issues
+Encoding: UTF-8
+LazyData: true
+KeepSource: true

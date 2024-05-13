@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+dash_eidos/DashEidos.py
+dash_eidos/Eidos.py
+dash_eidos/__init__.py
+dash_eidos/_imports_.py
+dash_eidos/dash_eidos.min.js
+dash_eidos/package-info.json
+dash_eidos.egg-info/PKG-INFO
+dash_eidos.egg-info/SOURCES.txt
+dash_eidos.egg-info/dependency_links.txt
+dash_eidos.egg-info/top_level.txt
+tests/test_usage.py

@@ -1,0 +1,5 @@
+#build files
+*.min.js
+*.js.map
+deps/*
+inst/*

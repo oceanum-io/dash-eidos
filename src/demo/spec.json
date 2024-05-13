@@ -1,0 +1,11 @@
+{
+  "id": "maptest",
+  "name": "test",
+  "title": "test",
+  "data": [],
+  "rootNode": {
+    "id": "map",
+    "nodeType": "world",
+    "nodeSpec": {}
+  }
+}
