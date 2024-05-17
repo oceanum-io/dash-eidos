@@ -19,6 +19,7 @@ const DashEidos = (props) => {
 DashEidos.defaultProps = {
   spectype: "spec",
   width: "100%",
+  eidos: {},
   height: 500,
   events: ["click"],
   renderer: "https://render.eidos.oceanum.io",
@@ -39,7 +40,7 @@ DashEidos.propTypes = {
    * The type of spec. Can be either 'spec' or 'patch'.
    *
    */
-  spectype: PropTypes.oneOf(["spec", "patch"]),
+  spectype: PropTypes.oneOf(["spec", "patch", "null"]),
 
   /**
    * An array of tooltip objects that follows he pydeck tooltip specifcation.

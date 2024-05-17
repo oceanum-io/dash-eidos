@@ -22,6 +22,10 @@ const Eidos = ({
     }
   }, []);
 
+  useEffect(() => {
+    updateSpec(eidos, spectype);
+  }, [eidos, spectype]);
+
   const handleMessage = useCallback(
     (message) => {
       const { data } = message;
@@ -40,11 +44,7 @@ const Eidos = ({
   const updateSpec = useCallback(
     (spec, spectype) => {
       const messageTarget = iframeRef.current.contentWindow;
-      if (spectype === "spec") {
-        messageTarget.postMessage({ id, type: "spec", payload: spec }, "*");
-      } else if (spectype === "patch") {
-        messageTarget.postMessage({ id, type: "patch", payload: patch }, "*");
-      }
+      messageTarget.postMessage({ id, type: spectype, payload: spec }, "*");
     },
     [iframeRef]
   );

@@ -13,7 +13,7 @@ Keyword arguments:
 - id (string; required):
     The ID used to identify this component in Dash callbacks.
 
-- eidos (dict; required):
+- eidos (dict; optional):
     Eidos spec.
 
 - events (list; default ["click"]):
@@ -29,7 +29,7 @@ Keyword arguments:
 - renderer (string; default "https://render.eidos.oceanum.io"):
     The URL of the EIDOS renderer.
 
-- spectype (a value equal to: "spec", "patch"; default "spec"):
+- spectype (a value equal to: "spec", "patch", "null"; default "spec"):
     The type of spec. Can be either 'spec' or 'patch'.
 
 - width (number | string; default "100%"):
@@ -41,7 +41,7 @@ Keyword arguments:
     _namespace = 'dash_eidos'
     _type = 'DashEidos'
     @_explicitize_args
-    def __init__(self, id=Component.REQUIRED, eidos=Component.REQUIRED, spectype=Component.UNDEFINED, width=Component.UNDEFINED, height=Component.UNDEFINED, events=Component.UNDEFINED, lastevent=Component.UNDEFINED, renderer=Component.UNDEFINED, **kwargs):
+    def __init__(self, id=Component.REQUIRED, eidos=Component.UNDEFINED, spectype=Component.UNDEFINED, width=Component.UNDEFINED, height=Component.UNDEFINED, events=Component.UNDEFINED, lastevent=Component.UNDEFINED, renderer=Component.UNDEFINED, **kwargs):
         self._prop_names = ['id', 'eidos', 'events', 'height', 'lastevent', 'renderer', 'spectype', 'width']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'eidos', 'events', 'height', 'lastevent', 'renderer', 'spectype', 'width']
@@ -51,7 +51,7 @@ Keyword arguments:
         _locals.update(kwargs)  # For wildcard attrs and excess named props
         args = {k: _locals[k] for k in _explicit_args}
 
-        for k in ['id', 'eidos']:
+        for k in ['id']:
             if k not in args:
                 raise TypeError(
                     'Required argument `' + k + '` was not specified.')

@@ -3,5 +3,11 @@
 *.js.map
 deps/*
 inst/*
+dist/*
+build/*
 
 node_modules
+pypi.conf
+.vscode
+
+__pycache__

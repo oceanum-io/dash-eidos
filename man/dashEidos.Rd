@@ -29,7 +29,7 @@ lastevent=NULL, renderer=NULL, spectype=NULL, width=NULL)
 
 \item{renderer}{Character. The URL of the EIDOS renderer.}
 
-\item{spectype}{A value equal to: "spec", "patch". The type of spec. Can be either 'spec' or 'patch'.}
+\item{spectype}{A value equal to: "spec", "patch", "null". The type of spec. Can be either 'spec' or 'patch'.}
 
 \item{width}{Numeric | character. An array of tooltip objects that follows he pydeck tooltip specifcation.
 An additonal 'layer' property can be added to the tooltip objects to restrict their action to that layer ID.}
