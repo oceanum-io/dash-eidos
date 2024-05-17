@@ -6,24 +6,26 @@ import geopandas as gpd
 import dash_eidos
 from dash import Dash, callback, html, Input, Output
 
-from oceanum.eidos import Eidos, Node, Layer, EidosDatasource
+from oceanum.eidos import Eidos, Node, FeatureLayerSpec, Layer, EidosDatasource
 
+layerSpec = FeatureLayerSpec(
+    hoverInfo={"template": "{{name}}"},
+    style={
+        "getPointRadius": 10,
+        "getFillColor": "red",
+        "opacity": 1.0,
+        "pointRadiusUnits": "pixels",
+    },
+)
 
 points_layer = Layer(
     id="points",
-    layerType="feature-overlay",
+    layerType="feature",
     dataId="points_data",
-    hoverInfo={"template": "{{name}}"
     visible=True,
-    layerSpec={
-        "style": {
-            "getPointRadius": 10,
-            "getFillColor": [255, 0, 0],
-            "opacity": 1.0,
-            "pointRadiusUnits": "pixels",
-        },
-    },
+    layerSpec=layerSpec,
 )
+
 
 points_data = gpd.GeoDataFrame(
     {"name": ["Null island"]}, geometry=[sh.geometry.Point(0, 0)]
@@ -61,6 +63,7 @@ app.layout = html.Div(
     Output("eidos_test", "eidos"),
     Output("eidos_test", "spectype"),
     Input("eidos_test", "lastevent"),
+    prevent_initial_call=True,
 )
 def update_point(lastevent):
     if not lastevent:

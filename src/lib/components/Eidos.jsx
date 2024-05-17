@@ -43,8 +43,10 @@ const Eidos = ({
 
   const updateSpec = useCallback(
     (spec, spectype) => {
-      const messageTarget = iframeRef.current.contentWindow;
-      messageTarget.postMessage({ id, type: spectype, payload: spec }, "*");
+      const messageTarget = iframeRef.current?.contentWindow;
+      if (messageTarget) {
+        messageTarget.postMessage({ id, type: spectype, payload: spec }, "*");
+      }
     },
     [iframeRef]
   );
